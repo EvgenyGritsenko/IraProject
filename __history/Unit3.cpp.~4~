@@ -1,0 +1,266 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm3 *Form3;
+//---------------------------------------------------------------------------
+__fastcall TForm3::TForm3(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SetupTest1()
+{
+    // Вопрос 1
+    Label1->Caption = "1. Что такое TForm?";
+    RadioGroup1Q1->Items->Clear();
+    RadioGroup1Q1->Items->Add("Класс формы");
+    RadioGroup1Q1->Items->Add("Компонент для отображения текста");
+    RadioGroup1Q1->Items->Add("Модуль");
+    RadioGroup1Q1->Items->Add("Структура данных");
+
+    // Вопрос 2
+    Label2->Caption = "2. Какой метод закрывает форму?";
+    RadioGroup1Q2->Items->Clear();
+    RadioGroup1Q2->Items->Add("Close");
+    RadioGroup1Q2->Items->Add("Show");
+    RadioGroup1Q2->Items->Add("Hide");
+    RadioGroup1Q2->Items->Add("Open");
+
+    // Вопрос 3
+    Label3->Caption = "3. Как вызвать модальное окно?";
+    RadioGroup1Q3->Items->Clear();
+    RadioGroup1Q3->Items->Add("ShowModal");
+    RadioGroup1Q3->Items->Add("Show");
+    RadioGroup1Q3->Items->Add("Hide");
+    RadioGroup1Q3->Items->Add("Close");
+
+    // Вопрос 4
+    Label4->Caption = "4. Какой метод используется для перерисовки формы?";
+    RadioGroup1Q4->Items->Clear();
+    RadioGroup1Q4->Items->Add("Repaint");
+    RadioGroup1Q4->Items->Add("Draw");
+    RadioGroup1Q4->Items->Add("Update");
+    RadioGroup1Q4->Items->Add("Paint");
+
+    // Вопрос 5
+    Label5->Caption = "5. Как создать новую форму в проекте?";
+    RadioGroup1Q5->Items->Clear();
+    RadioGroup1Q5->Items->Add("File -> New -> Form");
+    RadioGroup1Q5->Items->Add("File -> Open");
+    RadioGroup1Q5->Items->Add("Project -> New Form");
+    RadioGroup1Q5->Items->Add("Edit -> Add Form");
+
+    // Вопрос 6
+    Label6->Caption = "6. Как задать заголовок формы?";
+    RadioGroup1Q6->Items->Clear();
+    RadioGroup1Q6->Items->Add("Caption");
+    RadioGroup1Q6->Items->Add("Title");
+    RadioGroup1Q6->Items->Add("Header");
+    RadioGroup1Q6->Items->Add("Text");
+
+    // Вопрос 7
+    Label7->Caption = "7. Что делает метод Show?";
+    RadioGroup1Q7->Items->Clear();
+    RadioGroup1Q7->Items->Add("Отображает форму");
+    RadioGroup1Q7->Items->Add("Закрывает форму");
+    RadioGroup1Q7->Items->Add("Прячет форму");
+    RadioGroup1Q7->Items->Add("Очищает форму");
+
+    // Вопрос 8
+    Label8->Caption = "8. Какой метод скрывает форму?";
+    RadioGroup1Q8->Items->Clear();
+    RadioGroup1Q8->Items->Add("Hide");
+    RadioGroup1Q8->Items->Add("Close");
+    RadioGroup1Q8->Items->Add("Show");
+    RadioGroup1Q8->Items->Add("Minimize");
+
+    // Вопрос 9
+    Label9->Caption = "9. Какой компонент используется для ввода текста?";
+    RadioGroup1Q9->Items->Clear();
+    RadioGroup1Q9->Items->Add("TEdit");
+    RadioGroup1Q9->Items->Add("TLabel");
+    RadioGroup1Q9->Items->Add("TButton");
+    RadioGroup1Q9->Items->Add("TForm");
+
+    // Вопрос 10
+    Label10->Caption = "10. Как изменить размер формы?";
+    RadioGroup1Q10->Items->Clear();
+    RadioGroup1Q10->Items->Add("Width и Height");
+    RadioGroup1Q10->Items->Add("Size");
+    RadioGroup1Q10->Items->Add("Scale");
+    RadioGroup1Q10->Items->Add("Bounds");
+}
+
+void __fastcall TForm1::SetupTest2()
+{
+    // Вопрос 1
+    Label11->Caption = "1. Какой компонент используется для отображения изображения?";
+    RadioGroup2Q1->Items->Clear();
+    RadioGroup2Q1->Items->Add("TImage");
+    RadioGroup2Q1->Items->Add("TPicture");
+    RadioGroup2Q1->Items->Add("TForm");
+    RadioGroup2Q1->Items->Add("TLabel");
+
+    // Вопрос 2
+    Label12->Caption = "2. Какой метод завершает работу программы?";
+    RadioGroup2Q2->Items->Clear();
+    RadioGroup2Q2->Items->Add("Terminate");
+    RadioGroup2Q2->Items->Add("Close");
+    RadioGroup2Q2->Items->Add("Exit");
+    RadioGroup2Q2->Items->Add("Finish");
+
+    // Вопрос 3
+    Label13->Caption = "3. Какой компонент используется для создания меню?";
+    RadioGroup2Q3->Items->Clear();
+    RadioGroup2Q3->Items->Add("TMainMenu");
+    RadioGroup2Q3->Items->Add("TFormMenu");
+    RadioGroup2Q3->Items->Add("TButton");
+    RadioGroup2Q3->Items->Add("TLabel");
+
+    // Вопрос 4
+    Label14->Caption = "4. Что такое модальное окно?";
+    RadioGroup2Q4->Items->Clear();
+    RadioGroup2Q4->Items->Add("Окно, блокирующее остальные окна");
+    RadioGroup2Q4->Items->Add("Окно, отображаемое всегда на фоне");
+    RadioGroup2Q4->Items->Add("Главное окно");
+    RadioGroup2Q4->Items->Add("Всплывающее окно");
+
+    // Вопрос 5
+    Label15->Caption = "5. Как изменить иконку формы?";
+    RadioGroup2Q5->Items->Clear();
+    RadioGroup2Q5->Items->Add("Свойство Icon");
+    RadioGroup2Q5->Items->Add("Свойство Picture");
+    RadioGroup2Q5->Items->Add("Свойство Background");
+    RadioGroup2Q5->Items->Add("Свойство Title");
+
+    // Вопрос 6
+    Label16->Caption = "6. Какой метод скрывает форму с экрана?";
+    RadioGroup2Q6->Items->Clear();
+    RadioGroup2Q6->Items->Add("Hide");
+    RadioGroup2Q6->Items->Add("ShowModal");
+    RadioGroup2Q6->Items->Add("Close");
+    RadioGroup2Q6->Items->Add("Minimize");
+
+    // Вопрос 7
+    Label17->Caption = "7. Какой метод делает форму активной?";
+    RadioGroup2Q7->Items->Clear();
+    RadioGroup2Q7->Items->Add("SetFocus");
+    RadioGroup2Q7->Items->Add("Show");
+    RadioGroup2Q7->Items->Add("Activate");
+    RadioGroup2Q7->Items->Add("Open");
+
+    // Вопрос 8
+    Label18->Caption = "8. Какой метод завершает модальное окно?";
+    RadioGroup2Q8->Items->Clear();
+    RadioGroup2Q8->Items->Add("Close");
+    RadioGroup2Q8->Items->Add("Terminate");
+    RadioGroup2Q8->Items->Add("EndModal");
+    RadioGroup2Q8->Items->Add("Exit");
+
+    // Вопрос 9
+    Label19->Caption = "9. Какое свойство позволяет задать размер формы?";
+    RadioGroup2Q9->Items->Clear();
+    RadioGroup2Q9->Items->Add("ClientWidth и ClientHeight");
+    RadioGroup2Q9->Items->Add("FormSize");
+    RadioGroup2Q9->Items->Add("Width и Height");
+    RadioGroup2Q9->Items->Add("Size");
+
+	// Вопрос 10
+    Label20->Caption = "10. Как задать стиль границ формы?";
+    RadioGroup2Q10->Items->Clear();
+    RadioGroup2Q10->Items->Add("BorderStyle");
+    RadioGroup2Q10->Items->Add("WindowStyle");
+    RadioGroup2Q10->Items->Add("FormStyle");
+    RadioGroup2Q10->Items->Add("Style");
+}
+
+
+void __fastcall TForm1::SetupTest3()
+{
+    // Вопрос 1
+    Label21->Caption = "1. Какой компонент используется для отображения кнопки?";
+    RadioGroup3Q1->Items->Clear();
+    RadioGroup3Q1->Items->Add("TButton");
+    RadioGroup3Q1->Items->Add("TLabel");
+    RadioGroup3Q1->Items->Add("TEdit");
+    RadioGroup3Q1->Items->Add("TPanel");
+
+    // Вопрос 2
+    Label22->Caption = "2. Как изменить цвет фона формы?";
+    RadioGroup3Q2->Items->Clear();
+    RadioGroup3Q2->Items->Add("Color");
+    RadioGroup3Q2->Items->Add("BackgroundColor");
+    RadioGroup3Q2->Items->Add("BackColor");
+    RadioGroup3Q2->Items->Add("BrushColor");
+
+    // Вопрос 3
+    Label23->Caption = "3. Как задать всплывающую подсказку для компонента?";
+    RadioGroup3Q3->Items->Clear();
+    RadioGroup3Q3->Items->Add("Hint");
+    RadioGroup3Q3->Items->Add("ToolTip");
+    RadioGroup3Q3->Items->Add("HelpText");
+    RadioGroup3Q3->Items->Add("TipText");
+
+    // Вопрос 4
+    Label24->Caption = "4. Какой компонент используется для ввода пароля?";
+    RadioGroup3Q4->Items->Clear();
+    RadioGroup3Q4->Items->Add("TEdit с PasswordChar");
+    RadioGroup3Q4->Items->Add("TLabel");
+    RadioGroup3Q4->Items->Add("TPasswordEdit");
+    RadioGroup3Q4->Items->Add("TPasswordBox");
+
+    // Вопрос 5
+    Label25->Caption = "5. Какой метод скрывает форму?";
+    RadioGroup3Q5->Items->Clear();
+    RadioGroup3Q5->Items->Add("Hide");
+    RadioGroup3Q5->Items->Add("Close");
+    RadioGroup3Q5->Items->Add("Minimize");
+    RadioGroup3Q5->Items->Add("Show");
+
+    // Вопрос 6
+    Label26->Caption = "6. Какой метод используется для перерисовки формы?";
+    RadioGroup3Q6->Items->Clear();
+    RadioGroup3Q6->Items->Add("Repaint");
+    RadioGroup3Q6->Items->Add("Draw");
+    RadioGroup3Q6->Items->Add("Update");
+    RadioGroup3Q6->Items->Add("Refresh");
+
+    // Вопрос 7
+    Label27->Caption = "7. Какое свойство задает начальное положение формы?";
+    RadioGroup3Q7->Items->Clear();
+    RadioGroup3Q7->Items->Add("Position");
+    RadioGroup3Q7->Items->Add("Location");
+    RadioGroup3Q7->Items->Add("StartPos");
+    RadioGroup3Q7->Items->Add("InitialPos");
+
+    // Вопрос 8
+    Label28->Caption = "8. Какой метод изменяет заголовок формы во время выполнения?";
+    RadioGroup3Q8->Items->Clear();
+    RadioGroup3Q8->Items->Add("Caption");
+    RadioGroup3Q8->Items->Add("SetText");
+    RadioGroup3Q8->Items->Add("SetTitle");
+    RadioGroup3Q8->Items->Add("Title");
+
+    // Вопрос 9
+    Label29->Caption = "9. Какой компонент используется для многострочного ввода текста?";
+    RadioGroup3Q9->Items->Clear();
+    RadioGroup3Q9->Items->Add("TMemo");
+    RadioGroup3Q9->Items->Add("TEdit");
+    RadioGroup3Q9->Items->Add("TStringList");
+    RadioGroup3Q9->Items->Add("TLabel");
+
+    // Вопрос 10
+    Label30->Caption = "10. Какой метод делает форму видимой?";
+    RadioGroup3Q10->Items->Clear();
+    RadioGroup3Q10->Items->Add("Show");
+    RadioGroup3Q10->Items->Add("Hide");
+    RadioGroup3Q10->Items->Add("Repaint");
+    RadioGroup3Q10->Items->Add("Open");
+}
