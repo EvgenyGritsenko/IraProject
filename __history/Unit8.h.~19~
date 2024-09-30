@@ -1,0 +1,26 @@
+#ifndef Unit8H
+#define Unit8H
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
+
+class TForm8 : public TForm
+{
+__published:
+	TLabel *Label1;
+	TButton *Button1;
+	TButton *Button2;
+	TButton *Button3;
+	void __fastcall Button1Click(TObject *Sender);
+private:
+    int score;
+	bool (TForm8::*currentFunction)(int);
+public:
+    __fastcall TForm8(TComponent* Owner);
+};
+
+extern PACKAGE TForm8 *Form8;
+#endif

@@ -4,10 +4,19 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
 
 class TForm8 : public TForm
 {
 __published:
+	TLabel *Label1;
+	TButton *Button1;
+	TButton *Button2;
+	TButton *Button3;
+	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Button3Click(TObject *Sender);
 private:
     int score;
 	bool (TForm8::*currentFunction)(int);

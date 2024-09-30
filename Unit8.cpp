@@ -13,3 +13,21 @@ __fastcall TForm8::TForm8(TComponent* Owner)
 
 }
 
+void __fastcall TForm8::Button1Click(TObject *Sender)
+{
+	Form8->Color = clRed;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Button2Click(TObject *Sender)
+{
+	Form8->Color = clGreen;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Button3Click(TObject *Sender)
+{
+    Form8->Color = clBlue;
+}
+//---------------------------------------------------------------------------
+

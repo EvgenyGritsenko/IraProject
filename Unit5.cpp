@@ -12,6 +12,108 @@ TForm5 *Form5;
 __fastcall TForm5::TForm5(TComponent* Owner)
 	: TForm(Owner)
 {
+	SetupTest();
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm5::SetupTest()
+{
 
+	Label1->Caption = "1.  акой метод класса TForm используетс€ дл€ скрыти€ формы без ее уничтожени€?";
+	RadioGroup1->Items->Clear();
+	RadioGroup1->Items->Add("Close");
+	RadioGroup1->Items->Add("Hide");
+	RadioGroup1->Items->Add("Minimize");
+
+
+	Label2->Caption = "2.  акое свойство отвечает за цвет фона формы?";
+	RadioGroup2->Items->Clear();
+	RadioGroup2->Items->Add("BackgroundColor");
+	RadioGroup2->Items->Add("Color");
+	RadioGroup2->Items->Add("BackColor");
+
+
+	Label3->Caption = "3.  акой метод следует использовать, чтобы задать форму как главное окно приложени€?";
+	RadioGroup3->Items->Clear();
+	RadioGroup3->Items->Add("SetMainForm");
+	RadioGroup3->Items->Add("SetPrimaryForm");
+	RadioGroup3->Items->Add("Application->MainForm");
+
+
+
+	Label4->Caption = "4. акое значение свойства BorderStyle позвол€ет сделать окно формы полностью измен€емым?";
+	RadioGroup4->Items->Clear();
+	RadioGroup4->Items->Add("bsNone");
+	RadioGroup4->Items->Add(" bsDialog");
+	RadioGroup4->Items->Add("bsSizeable");
+
+
+	Label5->Caption = "5. „то произойдет при установке свойства FormStyle в fsStayOnTop?";
+	RadioGroup5->Items->Clear();
+	RadioGroup5->Items->Add(" ‘орма всегда будет поверх других окон");
+	RadioGroup5->Items->Add("‘орма свернетс€ в трей");
+	RadioGroup5->Items->Add("‘орма станет модальной");
+
+
+
+	Label6->Caption = "6.  акой метод класса TForm используетс€ дл€ программного изменени€ ширины и высоты формы?";
+	RadioGroup6->Items->Clear();
+	RadioGroup6->Items->Add("Resize");
+	RadioGroup6->Items->Add("SetBounds");
+	RadioGroup6->Items->Add("AdjustWindow");
+
+
+
+	Label7->Caption = "7. акое событие вызываетс€ при создании формы?";
+	RadioGroup7->Items->Clear();
+	RadioGroup7->Items->Add("OnCreate");
+	RadioGroup7->Items->Add("OnActivate");
+	RadioGroup7->Items->Add("OnShow");
+
+
+	Label8->Caption = "8.  акой компонент можно использовать дл€ добавлени€ меню в форму?";
+	RadioGroup8->Items->Clear();
+	RadioGroup8->Items->Add("TMainMenu");
+	RadioGroup8->Items->Add("TMenuStrip");
+	RadioGroup8->Items->Add("TMenu");
+
+
+	Label9->Caption = "9.  акое значение свойства FormStyle используетс€ дл€ создани€ модального окна?";
+	RadioGroup9->Items->Clear();
+	RadioGroup9->Items->Add("fsNormal");
+	RadioGroup9->Items->Add("fsModal");
+	RadioGroup9->Items->Add("fsStayOnTop");
+
+
+	Label10->Caption = "10.  акое свойство формы регулирует еЄ возможность быть свернутой в панель задач?";
+	RadioGroup10->Items->Clear();
+	RadioGroup10->Items->Add("WindowState");
+	RadioGroup10->Items->Add("ShowInTaskbar");
+	RadioGroup10->Items->Add("MinimizeStyle");
+
+}
+
+// ѕодсчЄт правильных ответов
+int __fastcall TForm5::CalculateScore()
+{
+    int score = 0;
+
+	if (RadioGroup1->ItemIndex == 1) score++;
+	if (RadioGroup2->ItemIndex == 1) score++;
+	if (RadioGroup3->ItemIndex == 2) score++;
+	if (RadioGroup4->ItemIndex == 2) score++;
+	if (RadioGroup5->ItemIndex == 0) score++;
+	if (RadioGroup6->ItemIndex == 1) score++;
+	if (RadioGroup7->ItemIndex == 0) score++;
+	if (RadioGroup8->ItemIndex == 0) score++;
+	if (RadioGroup9->ItemIndex == 1) score++;
+	if (RadioGroup10->ItemIndex == 1) score++;
+
+    return score;
+}
+
+
+void __fastcall TForm5::Button1Click(TObject *Sender)
+{
+    int score = CalculateScore();
+	ShowMessage("¬ы набрали " + IntToStr(score) + " из 10 правильных ответов.");
+}

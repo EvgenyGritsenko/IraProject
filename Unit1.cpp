@@ -11,9 +11,11 @@
 #include "Unit6.h"
 #include "Unit7.h"
 #include "Unit8.h"
-#include "FiveLesson.h"
 #include "Unit10.h"
 #include "Unit11.h"
+#include "Unit12.h"
+#include "Unit13.h"
+#include "Unit9.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -30,8 +32,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-	TForm3 *form = new TForm3(this);
-	form->Show();
+    Form12->Show();
 }
 //---------------------------------------------------------------------------
 
@@ -39,6 +40,74 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 void __fastcall TForm1::Button6Click(TObject *Sender)
 {
     Form3->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button10Click(TObject *Sender)
+{
+    Form1->WindowState = wsMaximized;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button11Click(TObject *Sender)
+{
+	Form1->WindowState = wsNormal;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button8Click(TObject *Sender)
+{
+    Form1->Width += 50;
+    Form1->Height += 50;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button9Click(TObject *Sender)
+{
+    Form1->Width -= 50;
+    Form1->Height -= 50;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button12Click(TObject *Sender)
+{
+	Form1->Position = poScreenCenter;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image3Click(TObject *Sender)
+{
+	Form1->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button7Click(TObject *Sender)
+{
+   Form13->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+	Form5->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button5Click(TObject *Sender)
+{
+    Form4->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+	Form8->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	Form9->Show();
 }
 //---------------------------------------------------------------------------
 

@@ -10,11 +10,47 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Skia.hpp>
 #include <Vcl.Imaging.pngimage.hpp>
+#include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
 class TForm4 : public TForm
 {
 __published:	// IDE-managed Components
+	TPageControl *PageControl1;
+	TTabSheet *TabSheet1;
+	TLabel *Label1;
+	TRadioGroup *RadioGroup1;
+	TTabSheet *TabSheet2;
+	TLabel *Label2;
+	TRadioGroup *RadioGroup2;
+	TTabSheet *TabSheet3;
+	TLabel *Label3;
+	TRadioGroup *RadioGroup3;
+	TTabSheet *TabSheet4;
+	TLabel *Label4;
+	TRadioGroup *RadioGroup5;
+	TTabSheet *TabSheet5;
+	TLabel *Label5;
+	TRadioGroup *RadioGroup6;
+	TTabSheet *TabSheet6;
+	TLabel *Label6;
+	TRadioGroup *RadioGroup7;
+	TTabSheet *TabSheet7;
+	TLabel *Label7;
+	TRadioGroup *RadioGroup8;
+	TTabSheet *TabSheet8;
+	TLabel *Label8;
+	TRadioGroup *RadioGroup9;
+	TTabSheet *TabSheet9;
+	TLabel *Label9;
+	TRadioGroup *RadioGroup10;
+	TTabSheet *TabSheet10;
+	TLabel *Label10;
+	TRadioGroup *RadioGroup4;
+	TButton *Button1;
+    void __fastcall Button1Click(TObject *Sender);
 private:	// User declarations
+    void __fastcall SetupTest();  // Установка вопросов и вариантов ответов
+    int __fastcall CalculateScore(); // Подсчёт правильных ответов
 public:		// User declarations
 	__fastcall TForm4(TComponent* Owner);
 };
