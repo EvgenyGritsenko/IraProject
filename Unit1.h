@@ -27,8 +27,6 @@ __published:	// IDE-managed Components
 	TButton *Button8;
 	TButton *Button9;
 	TButton *Button10;
-	TImage *Image2;
-	TImage *Image3;
 	TButton *Button11;
 	TButton *Button12;
 	TLabel *Label1;
